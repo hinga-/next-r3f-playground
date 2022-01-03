@@ -23,4 +23,8 @@ export const data = [
     href: '/bouncy-watch',
     text: 'Bouncy watch',
   },
+  {
+    href: '/haunted-house',
+    text: 'Haunted House',
+  },
 ]

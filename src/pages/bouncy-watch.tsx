@@ -1,9 +1,14 @@
-import { ContactShadows, Environment, Loader, PresentationControls } from "@react-three/drei"
-import { Canvas } from "@react-three/fiber"
-import { Watch } from "components/BouncyWatch"
-import { NextPage } from "next"
-import Head from "next/head"
-import { Suspense } from "react"
+import {
+  ContactShadows,
+  Environment,
+  Loader,
+  PresentationControls,
+} from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Watch } from 'components/BouncyWatch'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import { Suspense } from 'react'
 
 export const getStaticProps = async () => {
   return { props: { isDark: true } }
@@ -32,7 +37,8 @@ const BouncyWatch: NextPage = () => {
               snap={true}
               rotation={[0, 0.3, 0]}
               polar={[-Math.PI / 3, Math.PI / 3]}
-              azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
+              azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+            >
               <Watch
                 rotation={[-Math.PI / 2, 0, 0]}
                 position={[0, 0.25, 0]}

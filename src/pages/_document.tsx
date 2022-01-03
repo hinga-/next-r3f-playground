@@ -20,7 +20,7 @@ class MyDocument extends Document {
         <Head>
           <meta name="format-detection" content="telephone=no" />
         </Head>
-        <body className={ pageProps.isDark ? 'dark' : 'light' }>
+        <body className={pageProps.isDark ? 'dark' : 'light'}>
           <Nav />
           <Main />
           <NextScript />
