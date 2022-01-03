@@ -1,0 +1,54 @@
+{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^12.0.7",
+    "@react-three/drei": "^8.3.1",
+    "@react-three/fiber": "^7.0.24",
+    "@react-three/postprocessing": "^2.1.2",
+    "@types/three": "^0.135.0",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
+    "leva": "^0.9.18",
+    "next": "12.0.7",
+    "prettier": "^2.5.1",
+    "r3f-perf": "^4.9.1",
+    "raw-loader": "^4.0.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-spring": "^9.3.3",
+    "sass": "^1.45.1",
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "next-compose-plugins": "^2.2.1",
+    "simple-git-hooks": "^2.7.0",
+    "typescript": "4.5.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "npm run lint",
+      "npm run format"
+    ]
+  }
+}
